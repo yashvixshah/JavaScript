@@ -27,3 +27,39 @@ console.log(booleanIsLoggedIn)
 // 1 => true   0 => false
 // "" => false
 // "yashvi" => true
+
+
+/************************** Operations ********************************* */
+
+let value = 69
+let negValue = -value
+console.log(negValue)
+
+console.log("Arithmetic Operations")
+console.log(3+3)
+console.log(3-3)
+console.log(3*3)
+console.log(3**3)
+console.log(3/3)
+console.log(3%3)
+
+console.log("String operations");
+let str1="Yashvi"
+let str2="Shah"
+
+let str3 = str1 + str2
+console.log(str3);
+
+//problematic situations
+console.log("1"+2)
+console.log(1+"2")
+console.log("1"+2+2)
+console.log(1+2+"2")
+
+let counter=1;
+counter++;
+console.log(counter)
+
+
+
+
