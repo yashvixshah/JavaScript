@@ -30,3 +30,7 @@ let myObj=          //object stored in variable
 const myFunction=function(){
     console.log("Basic function");
 }
+
+
+//memory
+//stack is used for primitive types and heap for non-primitive types
