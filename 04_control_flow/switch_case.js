@@ -21,3 +21,9 @@ switch(month)
         console.log("June")
         break;
 }
+
+// //how to check is array is empty?
+// if(Arrayname.length===0)
+
+// //how to check is object is empty?
+// if(Object.keys(objectname).length===0)
