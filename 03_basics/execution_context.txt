@@ -1,0 +1,27 @@
+               ** Javascript execution context **
+How Javascript works behind the scene?
+
+Step 1: Global execution context
+        Reference using this variable
+
+Step 2: Memory Creation context
+        allocates memory to declared varibales, functions
+        not the value just memory using "undefined" 
+
+Step 3: Function Execution context
+        assigned values are stored in the variables now
+
+
+
+                    ** Call Stack **
+Global execution is always in stack 
+
+Then whichever function you call goes inside the stack and pops after termination
+
+Let's assume there are three nested functions 
+one() two() and three()
+
+then three will execute and pop
+second will execute and pop 
+and at last one() will execute and pop at last
+
