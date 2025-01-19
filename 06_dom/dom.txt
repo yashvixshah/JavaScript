@@ -1,0 +1,42 @@
+document.getElementById('title') //returns the elements html code
+
+document.getElementById('title').className  // returns className
+
+document.getElementById('title').getAttribute('id') //returns name of the id or class
+
+document.getElementById('title').setAttribute('class','new heading')    //sets the new attribute value replacing the old
+
+const title=document.getElementById('title')
+> title.style.backgroundColor="red"
+< "red"
+
+> title.style.borderRadius="50px"
+< "50px"
+
+> title.innerHTML    //gives html code with text
+< "DOM Learning"
+
+> title.textContent     //gives all the text content even the hidden one
+< "DOM Learning"
+
+> title.innerText       //only returns the visible text content
+< "DOM Learning"
+
+> document.querySelector('h1')  //gives back the first query with h1 tag
+< <h1 id="title" class="heading">DOM Learning</h1>
+
+> document.querySelectorAll('h1')   //gives back all query with h1 tag
+< NodeList [<h1 id="title">, <h1 id="title">, <h1 id="title">, <h1 id="title">] (4)
+
+document.querySelector('input[type="password"])     //selects first input field of password type
+
+.querySelectorAll gives back a node list so we need to access with index
+const myH1= document.querySelectorAll('h1")     
+
+myH1[0].style.color="red"
+
+htmlcollection NodeList etc should be converted to array to use functionalities
+like for each, map etc
+
+-- method: store in a varible and convert that variable to array
+Array.from(variablename)
