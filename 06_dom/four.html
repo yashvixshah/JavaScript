@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(language) {
+        const liTag=document.createElement('li')
+        const LangName=document.createTextNode(language)
+        liTag.appendChild(LangName)
+        document.querySelector('.languages').appendChild(liTag)
+    }
+    addLanguage("JavaScript")
+
+    //editing 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML="CPP".  less optimized approach
+    const newLi=document.createElement('li')
+    newLi.textContent="CPP"
+    secondLang.replaceWith(newLi)
+
+    //edit
+    const firstChild = document.querySelector("li:first-child")
+    firstChild.outerHTML="<li>.C</li>"
+
+    //remove
+    const elemToRemove= document.querySelector("li:last-child")
+    elemToRemove.remove()
+    
+</script>
+</html>
