@@ -1,8 +1,8 @@
 // can be declared using literal and constructor
-// if declared using literal -> it will be singleton 
+// if declared using literal({}) -> it will be singleton meaning they share the same instance.
 //otherwise multiple instances
 
-const mySymbol=Symbol("symbol1")
+const mySymbol=Symbol("symbol1") //constructor way
 //object literals
 const user={
     name: "yashvi",
