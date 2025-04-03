@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body>
+    <h2>SOME RANDOM IMAGES</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" id="photo" alt="photographer"></li>
+            <li><img width="200px" src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=" id="nature" alt=""></li>
+            <li><img width="200px" src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" id="animal" alt=""></li>
+            <li><a href="https://www.google.co.in/" id="google">GOOGLE</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //study following topics: type,timestamp,defaultPrevented
+    //target,toElement,srcElement,currentTarget
+    //clientX,clientY,screenX,screenY
+    //altkey,ctrlkey,shiftkey,keyCode
+
+    // document.getElementById('animal').onclick=function(){
+    //     alert("animal image clicked")
+    // }    not a feasible approach
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("Clicked inside the ul")
+    // },false)   
+
+    // document.getElementById('animal').addEventListener('click',function(e){
+    //     console.log("Clicked animal")
+    //     e.stopPropagation(); // won't bubble
+    // },false) 
+
+    document.getElementById('google').addEventListener('click',function(e){
+         e.preventDefault()
+         //e.stopPropagation()
+     },false)
+
+    document.getElementById('images').addEventListener('click',(e) =>{
+        console.log(e.target.tagName)
+        let remove=e.target.parentNode
+        remove.remove() //one way to remove
+    })
+    //third parameter(event propogation) by default is false but is very important 
+    //difference not noticeable
+    //false->event bubbling means when clicked on animal, it print Clicked inside the ul next
+    //true->event capturing means top down, it will print UI first and then animal
+
+</script>
+</html>
+
