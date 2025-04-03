@@ -1,4 +1,4 @@
-const insert=document.querySelector("insert")
+const insert=document.querySelector("#insert")
 window.addEventListener('keypress',(e)=>{
     insert.innerHTML=`<div><table>
         <tr>
