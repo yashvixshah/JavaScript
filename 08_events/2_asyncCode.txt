@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=ByhtOgF6uYM
+
+JavaScript is 
+-synchronous(one code execution after another) 
+-single threaded //slower than other languages but doesn't let you feel that
+
+JavaScipt is never found alone, always found in a runtime environment of browser/nodejs
+
+------------------This was about DEFAULT JAVASCRIPT-------------
+
+Execution Context of JS:
+- Global Execution Context(this), Browser's global execution context(window object)
+- Functional Execution Context
+
+Runs any code in two phases:
+1. Memory Creation Phase (allocates space for variables for e.g let a let b)
+    allocates undefined to all variables as of now
+2. Execution Phase(does the actual calculations a+b)
+    !IMP:
+    each function call create their new execution context(new variable environment + one execution thread)
+    and then again each would have it's own memory creation phase and execution phase
+    after it's execution, that new execution context is deleted too
+
+
+--------------------------CALL STACKS------------------------------
+1. create global execution context goes in stack
+2.  one(){
+       two(){
+            three(){
+            }
+          }
+        }
+
+        one will go in, two will go in, three will go in
+        three will b out first. (LIFO Principle)
+
+Each operation waits for the previous one to finish
+
+
+---------------------BLOCKING CODE VS NON_BLOCKING CODE-----------------
+
+Blocking Code:
+-Blocks the flow of program
+-Read file sync
+
+Non-Blocking Code:
+-Does not block execution
+-Read File Async
