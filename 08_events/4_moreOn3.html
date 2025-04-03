@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Yashvi Shah The Great</h1>
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+</body>
+<script>
+    const sayDate=function(str){
+    console.log(str,Date.now())
+   }
+
+   let remo;
+
+   document.getElementById("start").addEventListener('click',function(){
+      if(remo==null)
+        remo=setInterval(sayDate,1000,"hii")
+   })
+
+   document.getElementById("stop").addEventListener('click',function(){
+    clearInterval(remo)
+    remo=null
+   })
+</script>
+</html>
