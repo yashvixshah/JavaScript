@@ -31,8 +31,19 @@
 </body>
 <script>
     const requestURL="https://api.github.com/users/yashvixshah"
+   
     const xhr=new XMLHttpRequest()
     xhr.open('GET',requestURL)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+   
+>>>>>>> f8cb128 (Removed sensitive API key)
+>>>>>>> c1f019b (XMLHttpRequest)
+>>>>>>> 005906f (XMLHttpRequest)
     xhr.onreadystatechange = function(){    //to monitor state change continuously
         console.log(xhr.readyState)
         if(xhr.readyState===4)
@@ -40,7 +51,6 @@
             const dataReceived=JSON.parse(this.responseText) //to convert data received in string to JSON object
             console.log(typeof dataReceived)
             console.log(dataReceived)  //printing the received response's id
-
 
             const container=document.getElementById('container')
             console.log(container)
