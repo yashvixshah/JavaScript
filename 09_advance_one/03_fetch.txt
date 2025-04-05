@@ -1,0 +1,31 @@
+fetch was already available on browser
+it came to nodejs later and changed the paradigm
+
+fistly it was XMLHttpRequest
+then FETCH API was introduced
+
+the fetch api starts a process of fetching a resource from the network(network-based)
+-the promise resolves the response received from fetch
+
+-there's a special queue for fetch() which runs before any calls (answer to the previous lecture question)
+(refer the diagram screenshot of js internal)
+-the queue is called "micro-task queue" or "priority queue"
+
+Diagram textually:
+-JS Engine: memory heap, call stack(global execution context, functional execution context)
+-from js engine, several calls Special Calls are made to Web APIs or nodejs
+ for e.g DOM API, setTimeout, setInterval, fetch()
+-Other then fetch call, all other special calls go to the task queue and the fetch calls go to the priority queue and executes before task queue calls
+-setTimeout stores the function call back in register and then stores it in the task queue
+
+----Fetch Internal Working
+--response = fetch('website.com',{objects})
+
+As soon as you call fetch('website.com',{objects}) the mechanism is divided into two parts
+-1.Data: One part handles space for data in memory which has further two parts 
+   i) OnFulfilled[function()] ii) OnRejection[function()]. We can't access these arrays and data directly
+-2.WebBrowsers/NodeJS: Other part handles API requests on browser
+   If request is successful, it goes to OnFulfilled[]
+   else, it goes to OnRejection[]
+
+The functions in the OnFulfilled and OnRejection arrays are responsible to get the response for us
