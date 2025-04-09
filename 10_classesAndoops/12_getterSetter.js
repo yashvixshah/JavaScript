@@ -27,3 +27,7 @@ const yashvi=new User("yashvi@abc.com","abc")
 console.log(yashvi.password)
 console.log(yashvi.email)
 
+  //closures 
+    //a closure gives you accesss to outer function's scope from inner function
+
+    //lexicalscoping
